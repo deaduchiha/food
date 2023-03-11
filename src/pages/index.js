@@ -1,9 +1,10 @@
 import React from "react";
+import Layout from "@/components/layout/layout";
 
 const Home = () => {
   return (
     <>
-      <div>This is homepage</div>
+      <div>hello</div>
     </>
   );
 };
