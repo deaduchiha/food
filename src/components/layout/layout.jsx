@@ -26,6 +26,8 @@ const Layout = ({ children }) => {
             <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
               <Box flex={1}>
                 <Button
+                  as={Link}
+                  href="/"
                   border="none"
                   bg="none"
                   _hover={{
@@ -36,7 +38,7 @@ const Layout = ({ children }) => {
                     bg: "transparent",
                   }}
                 >
-                  <Link href="/">Food-Bar</Link>
+                  Food-Bar
                 </Button>
               </Box>
               <Menu>
@@ -44,6 +46,8 @@ const Layout = ({ children }) => {
                   {Links.map((link) => (
                     <Button
                       key={link}
+                      as={Link}
+                      href={`/${link}`}
                       border="none"
                       bg="none"
                       _hover={{
@@ -54,7 +58,7 @@ const Layout = ({ children }) => {
                         bg: "transparent",
                       }}
                     >
-                      <Link href={link}>{link}</Link>
+                      {link}
                     </Button>
                   ))}
                 </Flex>
@@ -63,7 +67,9 @@ const Layout = ({ children }) => {
           </Container>
         </Box>
       </header>
-      <Container maxW="container.xl">{children}</Container>
+      <Container my={5} maxW="container.xl">
+        {children}
+      </Container>
       <footer>
         <Box
           bg={useColorModeValue("#42d5a7")}
