@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
           </Container>
         </Box>
       </header>
-      <Box>{children}</Box>
+      <Container maxW="container.xl">{children}</Container>
       <footer>
         <Box
           bg={useColorModeValue("#42d5a7")}
