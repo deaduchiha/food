@@ -1,21 +1,31 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Heading,
-  SimpleGrid,
-  Text,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 const Banner = () => {
   return (
-    <SimpleGrid columns={2} spacingX="40px" spacingY="20px" alignItems="center">
-      <Box display="flex" flexDirection="column" gap={2}>
+    <Flex
+      spacingY="20px"
+      flexDirection={{
+        lg: "row",
+        md: "row",
+        // sm: "column-reverse ",
+        base: "column-reverse ",
+      }}
+      textAlign={{ md: "inherit", base: "center" }}
+      gap={{ base: 10 }}
+      alignItems="center"
+      justifyContent="space-between"
+    >
+      <Box
+        w={{ md: "lg", base: "base" }}
+        display="flex"
+        flexDirection="column"
+        gap={2}
+      >
         <Heading as="h2">Food Bar</Heading>
         <Text as="b">Food delivery and takeout!</Text>
-        <Text>
+        <Text color="#a0a1a3">
           Food Bar is an online food ordering and delivery platform launched by
           Uber in 2014. Meals are delivered by couriers using cars, scooters,
           bikes, or on foot.
@@ -23,20 +33,20 @@ const Banner = () => {
         <Button
           as={Link}
           href="/menu"
-          w="fit-content"
-          bg="#003939"
+          //   w="fit-content"
+          bg="#d74a3a"
           color="#fbfdff"
           _hover={{
-            color: "#42d5a7",
+            color: "#473328",
           }}
         >
           See All
         </Button>
       </Box>
       <Box>
-        <Image src="/images/banner.png" alt="banner" />
+        <Image w={"lg"} src="/images/banner.png" alt="banner" />
       </Box>
-    </SimpleGrid>
+    </Flex>
   );
 };
 

@@ -18,8 +18,8 @@ const Layout = ({ children }) => {
     <>
       <header>
         <Box
-          bg={useColorModeValue("#003939")}
-          color={useColorModeValue("#fbfdff")}
+          bg={useColorModeValue("#eff4ee")}
+          color={useColorModeValue("#473328")}
           px={4}
         >
           <Container maxW="container.xl">
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
                   border="none"
                   bg="none"
                   _hover={{
-                    color: "#42d5a7",
+                    color: "#d74a3a",
                     bg: "transparent",
                   }}
                   _focus={{
@@ -51,7 +51,7 @@ const Layout = ({ children }) => {
                       border="none"
                       bg="none"
                       _hover={{
-                        color: "#42d5a7",
+                        color: "#d74a3a",
                         bg: "transparent",
                       }}
                       _focus={{
@@ -72,8 +72,8 @@ const Layout = ({ children }) => {
       </Container>
       <footer>
         <Box
-          bg={useColorModeValue("#42d5a7")}
-          color={useColorModeValue("#003939")}
+          bg={useColorModeValue("#eff4ee")}
+          color={useColorModeValue("#473328")}
           py={2}
         >
           <Container display="flex" justifyContent="center">
