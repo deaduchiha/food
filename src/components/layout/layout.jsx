@@ -1,6 +1,6 @@
 import React from "react";
-
 import Link from "next/link";
+
 import {
   Box,
   Flex,
@@ -57,8 +57,6 @@ const Layout = ({ children }) => {
                       <Link href={link}>{link}</Link>
                     </Button>
                   ))}
-                  {/* <Link href="/menu">Menu</Link>
-                  <Link href="/categories">Categories</Link> */}
                 </Flex>
               </Menu>
             </Flex>
