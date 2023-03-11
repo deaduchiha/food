@@ -5,11 +5,9 @@ import Link from "next/link";
 const Banner = () => {
   return (
     <Flex
-      spacingY="20px"
       flexDirection={{
         lg: "row",
         md: "row",
-        // sm: "column-reverse ",
         base: "column-reverse ",
       }}
       textAlign={{ md: "inherit", base: "center" }}
@@ -33,7 +31,6 @@ const Banner = () => {
         <Button
           as={Link}
           href="/menu"
-          //   w="fit-content"
           bg="#d74a3a"
           color="#fbfdff"
           _hover={{
