@@ -5,6 +5,7 @@ import Attributes from "@/components/modules/attributes/attributes";
 import Banner from "@/components/modules/banner/banner";
 import Definition from "@/components/modules/definition/definition";
 import Company from "@/components/modules/company/Company";
+import Instruction from "@/components/modules/instruction/instruction";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Attributes />
       <Definition />
       <Company />
+      <Instruction />
     </>
   );
 };
