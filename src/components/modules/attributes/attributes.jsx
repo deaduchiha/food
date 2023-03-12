@@ -10,7 +10,9 @@ import { BsClockHistory } from "react-icons/bs";
 const Attributes = () => {
   return (
     <Box my={10}>
-      <Heading as="h2">Why us!?</Heading>
+      <Heading as="h2" mb={5}>
+        Why us!?
+      </Heading>
       <Flex mt={5} justifyContent="space-between" flexWrap="wrap" gap={5}>
         <CardEl icon={<FaPlaneDeparture />} title="fast" />
         <CardEl icon={<BiRestaurant />} title="Best Restaurants" />
