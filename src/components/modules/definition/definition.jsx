@@ -4,7 +4,7 @@ import React from "react";
 const Definition = () => {
   return (
     <>
-      <Box>
+      <Box my={20}>
         <Heading as="h2" mb={5}>
           Who We Are?
         </Heading>

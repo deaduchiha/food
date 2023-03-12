@@ -9,7 +9,7 @@ import { BsClockHistory } from "react-icons/bs";
 
 const Attributes = () => {
   return (
-    <Box my={10}>
+    <Box my={20}>
       <Heading as="h2" mb={5}>
         Why us!?
       </Heading>

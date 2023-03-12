@@ -14,6 +14,7 @@ const Banner = () => {
       gap={{ base: 10 }}
       alignItems="center"
       justifyContent="space-between"
+      my={20}
     >
       <Box
         w={{ md: "lg", base: "base" }}
