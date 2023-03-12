@@ -7,12 +7,12 @@ const CardEl = ({ icon, title }) => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      fontSize="1.9rem"
       w="150px"
       h="150px"
+      textAlign="center"
     >
-      <CardHeader>{icon}</CardHeader>
-      <CardBody>
+      <CardHeader fontSize="2rem">{icon}</CardHeader>
+      <CardBody fontSize="1.2rem">
         <Text>{title}</Text>
       </CardBody>
     </Card>
