@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   Image,
@@ -13,6 +12,7 @@ import {
 
 import { BsFillPinMapFill } from "react-icons/bs";
 import { FaMoneyBillAlt } from "react-icons/fa";
+import Link from "next/link";
 
 const FoodCard = (props) => {
   const { id, name, price, details, discount } = props;
@@ -64,6 +64,8 @@ const FoodCard = (props) => {
 
       <CardFooter>
         <Button
+          as={Link}
+          href={`/menu/${id}`}
           w="full"
           bg="#d74a3a"
           color="#fbfdff"
