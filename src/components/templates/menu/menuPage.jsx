@@ -5,7 +5,6 @@ import FoodCard from "@/components/modules/menu/card";
 // components
 
 const MenuPage = ({ data }) => {
-  console.log(data);
   return (
     <Box my={20} px={5}>
       <Heading as="h2" mb={10}>

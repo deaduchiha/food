@@ -1,5 +1,7 @@
-import { useRouter } from "next/router";
 import React from "react";
+import { useRouter } from "next/router";
+
+import DetailsPage from "@/components/templates/details/details";
 
 const Details = ({ data }) => {
   const router = useRouter();
@@ -8,7 +10,7 @@ const Details = ({ data }) => {
     return <h2>Loading...</h2>;
   }
 
-  return <h3>detail</h3>;
+  return <DetailsPage {...data} />;
 };
 export default Details;
 
