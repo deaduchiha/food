@@ -76,7 +76,7 @@ const Layout = ({ children }) => {
           color={useColorModeValue("#473328")}
           py={2}
         >
-          <Container display="flex" justifyContent="center">
+          <Container display="flex" bottom={0} justifyContent="center">
             <Text>Food-Bar | nextJs</Text>
           </Container>
         </Box>
