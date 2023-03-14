@@ -70,17 +70,6 @@ const Layout = ({ children }) => {
       <Container my={5} maxW="container.xl">
         {children}
       </Container>
-      <footer>
-        <Box
-          bg={useColorModeValue("#eff4ee")}
-          color={useColorModeValue("#473328")}
-          py={2}
-        >
-          <Container display="flex" bottom={0} justifyContent="center">
-            <Text>Food-Bar | nextJs</Text>
-          </Container>
-        </Box>
-      </footer>
     </>
   );
 };

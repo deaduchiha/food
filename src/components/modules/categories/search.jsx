@@ -1,16 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Box, Button, Flex, Heading, Select } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Image, Select } from "@chakra-ui/react";
+import FoodCard from "../menu/card";
 
-const Search = () => {
+const Search = ({ data }) => {
+  console.log(data);
   const router = useRouter();
   const [query, setQuery] = useState({ difficulty: "", time: "" });
+
+  useEffect(() => {
+    const { difficulty, time } = router.query;
+    if (query.difficulty !== difficulty || query.time !== time) {
+      setQuery({ difficulty, time });
+    }
+  }, []);
 
   const changeHandler = (e) => {
     setQuery({ ...query, [e.target.name]: e.target.value });
   };
 
-  const searchHandler = (e) => {
+  const searchHandler = () => {
     router.push({
       pathname: "/categories",
       query,
@@ -56,6 +65,21 @@ const Search = () => {
         >
           Search
         </Button>
+      </Flex>
+      <Flex pt={100} justifyContent="center">
+        {!data.length ? (
+          <Image w="200" src="/images/search.png" alt="categories" />
+        ) : undefined}
+      </Flex>
+      <Flex
+        justifyContent={{ md: "space-between", base: "center" }}
+        flexWrap="wrap"
+        gap={10}
+        mt={10}
+      >
+        {data.map((food) => (
+          <FoodCard key={food.id} {...food} />
+        ))}
       </Flex>
     </Box>
   );

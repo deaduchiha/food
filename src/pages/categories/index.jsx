@@ -2,7 +2,7 @@ import CategoriesPage from "@/components/templates/categories/categories";
 import React from "react";
 
 const Categories = ({ data }) => {
-  return <CategoriesPage {...data} />;
+  return <CategoriesPage data={data} />;
 };
 
 export default Categories;
